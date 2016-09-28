@@ -37,6 +37,7 @@ public class ItemRepoViewModel extends BaseObservable implements ViewModel {
 
     @Override
     public void destroy() {
+
         //In this case destroy doesn't need to do anything because there is not async calls
     }
 

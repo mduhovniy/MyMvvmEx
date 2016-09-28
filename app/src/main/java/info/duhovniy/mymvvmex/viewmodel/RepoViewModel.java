@@ -73,8 +73,8 @@ public class RepoViewModel implements ViewModel {
         MyApplication application = MyApplication.get(context);
         GitService githubService = application.getGitService();
         subscription = githubService.userFromUrl(url)
-                .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(application.getDefaultScheduler())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Action1<User>() {
                     @Override
                     public void call(User user) {

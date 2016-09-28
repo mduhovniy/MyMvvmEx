@@ -101,8 +101,8 @@ public class MainViewModel implements ViewModel {
         MyApplication application = MyApplication.get(context);
         GitService githubService = application.getGitService();
         subscription = githubService.publicRepositories(username)
-                .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(application.getDefaultScheduler())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<List<Repo>>() {
                     @Override
                     public void onCompleted() {

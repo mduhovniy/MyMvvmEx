@@ -44,10 +44,10 @@ public class RepositoryAdapter extends RecyclerView.Adapter<RepositoryAdapter.Re
         return repositories.size();
     }
 
-    public static class RepositoryViewHolder extends RecyclerView.ViewHolder {
+    static class RepositoryViewHolder extends RecyclerView.ViewHolder {
         final ItemRepoBinding binding;
 
-        public RepositoryViewHolder(ItemRepoBinding binding) {
+        RepositoryViewHolder(ItemRepoBinding binding) {
             super(binding.cardView);
             this.binding = binding;
         }
